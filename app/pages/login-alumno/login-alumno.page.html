@@ -22,9 +22,13 @@
         <ion-input type="password" placeholder="*********" name="inputContraseñaAlumno" [(ngModel)]="alumno.password"
           required></ion-input>
       </ion-item>
+
     </ion-card>
-    <ion-button [disabled]="formulario.invalid" type="submit" expand="full" color="tertiary" shape="round"
-      routerLink="/home-alumno">Entrar</ion-button>
+    <center>
+      <ion-button [disabled]="formulario.invalid" type="submit" color="tertiary" shape="round"
+        routerLink="/home-alumno">
+        Entrar</ion-button>
+    </center>
   </form>
 
   <img src="./assets/universitariosHome.png" alt="">
@@ -32,3 +36,11 @@
 
 
 </ion-content>
+
+
+<ion-footer>
+  <div class="ocean">
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+</ion-footer>

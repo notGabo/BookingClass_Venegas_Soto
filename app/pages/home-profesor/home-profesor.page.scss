@@ -10,3 +10,68 @@
     --ion-toolbar-background: #3e5394;
     --ion-text-color: #E9DDF3;
 }
+
+.ios {
+    --ion-item-background: #5877d3;
+    --ion-background-color: #E9DDF3;
+    --ion-toolbar-background: #3e5394;
+    --ion-text-color: #E9DDF3;
+}
+
+// best seen at 1500px or less
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: #433388;
+    overflow: hidden;
+}
+
+.ocean {
+    height: 1%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #6b5da4;
+}
+
+.wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/wavePurple.svg) repeat-x;
+    position: absolute;
+    bottom: -5px;
+    width: 6400px;
+    height: 60px;
+    animation: wave 80s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite, swell 8s ease -1.25s infinite;
+    transform: translate3d(0, 0, 0);
+    filter: invert(1) sepia(1) saturate(40) hue-rotate(190deg);
+}
+
+@keyframes wave {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -1600px;
+    }
+}
+
+@keyframes swell {
+
+    0%,
+    100% {
+        transform: translate3d(0, 40, 0);
+    }
+
+    50% {
+        transform: translate3d(0, 20, 0);
+    }
+}
+
+.endWave {
+    display: none;
+}

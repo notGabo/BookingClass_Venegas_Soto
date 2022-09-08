@@ -17,7 +17,8 @@ export class MenuAlumnoPage implements OnInit {
     const alert = await this.alertController.create({
       cssClass: 'inputCodigoAlumno',
       inputs: [{
-        placeholder: 'Codigo'
+        placeholder: 'Codigo',
+        cssClass: 'colorInput'
       }],
       buttons: [{
         text: 'Cancelar',
@@ -27,8 +28,7 @@ export class MenuAlumnoPage implements OnInit {
       },
       {
         text: 'Ingresar',
-        role: 'confirm',
-        cssClass: 'botonesCodigoAlumno'
+        role: 'confirm'
       }],
     });
     await alert.present();
