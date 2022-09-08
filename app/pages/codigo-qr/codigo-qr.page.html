@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="" color="custom1"></ion-back-button>
+    </ion-buttons>
+    <ion-title id="titulo">{{getCodigoClase()}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <p>Asignatura : {{getCodigoClase()}}</p>
+    <P>Clase N°{{getNumeroClase()}}</P>
+    <p>Sala : {{getSala()}}</p>
+    <p>Hora inicio : {{getHoraInicio()}}</p>
+    <p>Hora termino : {{getHoraTermino()}}</p>
+    <img
+      src="https://api.qrserver.com/v1/create-qr-code/?size=225x225&data=www.classbook.cl/Clase={{getNumeroClase()}}/Asignatura={{getCodigoClase()}}/Sala={{getSala()}}/id={{randomNumber()}}"
+      alt="qr-code">
+    <p>Codigo manual = {{getCodigoClase()}}{{getNumeroClase()}}{{getSala()}}{{randomNumber()}}</p>
+  </ion-card>
+
+</ion-content>

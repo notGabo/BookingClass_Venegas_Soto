@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="" color="custom1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Generar QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+    <ion-card>
+
+
+      <ion-item>
+        <ion-label>Codigo Asignatura:</ion-label>
+        <ion-input type="text" placeholder="AAA123" name="codigo" [(ngModel)]="clase.codigo" required> </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Clase N°:</ion-label>
+        <ion-input type="text" pattern="[0-9]+" placeholder="1" name="numero" [(ngModel)]="clase.numero" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Hora inicio:</ion-label>
+        <ion-input type="time" placeholder="01:00 PM" name="horaInicio" [(ngModel)]="clase.horaInicio" required>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Hora termino:</ion-label>
+        <ion-input type="time" placeholder="02:00 PM" name="horaTermino" [(ngModel)]="clase.horaTermino" required>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Sala:</ion-label>
+        <ion-input type="text" placeholder="001" name="Sala" [(ngModel)]="clase.sala" required></ion-input>
+      </ion-item>
+
+    </ion-card>
+    <ion-button [disabled]="formulario.invalid" type="submit" expand="full" color="tertiary" shape="round"
+      routerLink="/codigo-qr">Abrir clase</ion-button>
+  </form>
+
+</ion-content>

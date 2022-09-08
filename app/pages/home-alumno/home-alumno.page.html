@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inicio Alumnos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h4 class="titulo" style="color: #304468;">{{getCorreoAlumno()}}</h4>
+  <ion-card>
+    <ion-item routerLink="/menu-alumno" detail=true>
+      <ion-icon slot="start" name="camera-outline"></ion-icon>
+      <ion-label>Ingresar a clase</ion-label>
+    </ion-item>
+    <ion-item routerLink="/configuracion" detail=true>
+      <ion-icon slot="start" name="settings-outline"></ion-icon>
+      <ion-label>Configuracion</ion-label>
+    </ion-item>
+    <ion-item routerLink="/inicio" detail=true>
+      <ion-icon slot="start" name="log-out-outline"></ion-icon>
+      <ion-label>Cerrar sesion</ion-label>
+    </ion-item>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,59 @@
+ion-card.backgroundCardLoginAlumno {
+    --background: url('/assets/alumnoLoginCard.jpg') 0 0/100% 100% no-repeat;
+    position: relative;
+    isolation: isolate;
+    border-radius: 30px;
+    margin-top: 50px;
+}
+
+ion-card.backgroundCardLoginProfesor {
+    --background: url('/assets/profesorLoginCard.jpg') 0 0/100% 100% no-repeat;
+    position: relative;
+    isolation: isolate;
+    border-radius: 30px;
+    margin-bottom: 50px;
+}
+
+
+ion-card.backgroundCardLoginAlumno::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: black;
+    opacity: 0.45;
+}
+
+ion-card.backgroundCardLoginProfesor::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: black;
+    opacity: 0.45;
+}
+
+ion-grid {
+    height: 100%;
+}
+
+ion-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+}
+
+p {
+    color: white;
+    text-align: center;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}

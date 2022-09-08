@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="" color="custom1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ingresar a clase</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card class="cardEscanear opacidad">
+          <ion-card-header>
+            <ion-card-title style="text-align: center;"><b>Escanear</b></ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Escanea el codigo QR generado por tu profesor para ingresar a tu clase</p>
+            <ion-button routerLink="/escanear-qr" expand="block" color="tertiary" shape="round">
+              Escanear
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card class="cardEscribir opacidad">
+          <ion-card-header>
+            <ion-card-title style="text-align: center;"><b>Escribir</b></ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Si tienes problemas con tu camara, puedes escribir el codigo para
+              ingresar a la clase</p>
+            <ion-button (click)="ingresarCodigo()" expand="block" color="tertiary" shape="round">
+              Escribir
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

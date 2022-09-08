@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="" color="custom1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Alumno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+    <ion-card>
+      <ion-item>
+        <ion-label>Correo Alumno</ion-label>
+        <ion-input type="email" placeholder="alumno@duocuc.cl" name="inputCorreoAlumno"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="alumno.email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Contraseña</ion-label>
+        <ion-input type="password" placeholder="*********" name="inputContraseñaAlumno" [(ngModel)]="alumno.password"
+          required></ion-input>
+      </ion-item>
+    </ion-card>
+    <ion-button [disabled]="formulario.invalid" type="submit" expand="full" color="tertiary" shape="round"
+      routerLink="/home-alumno">Entrar</ion-button>
+  </form>
+
+  <img src="./assets/universitariosHome.png" alt="">
+
+
+
+</ion-content>
