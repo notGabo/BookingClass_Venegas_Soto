@@ -13,7 +13,6 @@ export class MenuAlumnoPage implements OnInit {
   ngOnInit() {
   }
 
-
   async ingresarCodigo() {
     const alert = await this.alertController.create({
       cssClass: 'inputCodigoAlumno',
@@ -34,5 +33,4 @@ export class MenuAlumnoPage implements OnInit {
     });
     await alert.present();
   }
-
 }
