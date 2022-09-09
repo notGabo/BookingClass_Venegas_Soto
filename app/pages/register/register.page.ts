@@ -12,4 +12,16 @@ export class RegisterPage implements OnInit {
   ngOnInit() {
   }
 
+  registro = {
+    email: '',
+    password: '',
+    repetirEmail: '',
+    repetirPassword: ''
+  };
+
+  onSubmit() {
+    console.log('Formulario enviado');
+    console.log(this.registro);
+  };
+
 }

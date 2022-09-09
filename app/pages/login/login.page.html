@@ -34,12 +34,14 @@
           </ion-card-header>
           <ion-card-content>
             <p>Podras escanear los codigos generados por tu profesor y marcar tu asistencia </p>
-            <ion-button (click)="redirectAlumno()" expand="block" shape="round" color="tertiary">
+            <ion-button (click)="redirectAlumno()" expand="full" shape="round" color="tertiary">
               Login
             </ion-button>
           </ion-card-content>
         </ion-card>
-
+        <ion-button routerLink="/register" expand="full" shape="round" color="tertiary">
+          ¿No tienes cuenta? ¡Registrate!
+        </ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>

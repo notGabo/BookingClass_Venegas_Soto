@@ -1,12 +1,52 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/" text="Back" color="primary"></ion-back-button>
+      <ion-back-button defaultHref="/" text="" color="custom1"></ion-back-button>
     </ion-buttons>
-    <ion-title>register</ion-title>
+    <ion-title>Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+    <ion-card>
+
+      <ion-item>
+        <ion-label>Correo</ion-label>
+        <ion-input type="email" placeholder="correo@duoc.cl" name="inputCorreo"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="registro.email" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Repetir Correo</ion-label>
+        <ion-input type="email" placeholder="repetir correo" name="repetirInputCorreo"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="registro.repetirEmail" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Contraseña</ion-label>
+        <ion-input type="password" placeholder="*********" name="repetirInputContraseña"
+          [(ngModel)]="registro.Repetirpassword" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Repetir Contraseña</ion-label>
+        <ion-input type="password" placeholder="*********" name="repetirInputContraseña"
+          [(ngModel)]="registro.repetirPassword" required></ion-input>
+      </ion-item>
+    </ion-card>
+    <center>
+      <ion-button [disabled]="formulario.invalid" type="submit" color="tertiary" shape="round" routerLink="/inicio">
+        Registrar profesor</ion-button>
+      <p style="color:#000000;">Ó</p>
+      <ion-button [disabled]="formulario.invalid" type="submit" color="tertiary" shape="round" routerLink="/inicio">
+        Registrar Alumno</ion-button>
+    </center>
+  </form>
 </ion-content>
+<ion-footer>
+  <div class="ocean">
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+</ion-footer>

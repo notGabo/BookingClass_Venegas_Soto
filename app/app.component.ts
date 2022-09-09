@@ -37,7 +37,7 @@ export class AppComponent {
 
   ngOnInit() {
     this.router.events.subscribe((event: any) => {
-      if (event.url in ['/', '/codigo-qr', '/escanear-qr', '/configuracion', '/generador-qr', '/home-alumno', '/home-profesor', '/login-alumno', '/login-profesor', '/menu-alumno']) {
+      if (event.url in ['/', '/codigo-qr', '/escanear-qr', '/configuracion', '/generador-qr', '/home-alumno', '/home-profesor', '/login-alumno', '/login-profesor', '/menu-alumno', '/register']) {
         this.hasMenu = false;
       }
       else {
